@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden shutter</title>
+
+  <style>
+    /* -------------------------------
+       GLOBAL STYLES
+       ------------------------------- */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+      color: #222;
+    }
+
+    /* -------------------------------
+       NAVIGATION BAR
+       ------------------------------- */
+    nav {
+      background: linear-gradient(90deg, #000428, #004e92);
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    nav li {
+      float: left;
+      margin-right: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+    }
+    nav a:hover {
+      color: gold;
+    }
+    nav a:active {
+      color: orange;
+    }
+    nav a:visited {
+      color: lightgray;
+    }
+
+    /* -------------------------------
+       SECTIONS (Removed big height)
+       ------------------------------- */
+    section {
+      padding: 1.5em 2em;
+      margin: 0;            /* removed large outer gap */
+      border-bottom: 1px solid #ccc; /* light divider line */
+    }
+
+    /* HOME SECTION */
+    #home {
+      background: radial-gradient(circle, #e0f7fa, #b2ebf2);
+    }
+    #home h1 {
+      text-align: center;
+      text-shadow: 3px 2px lightgray;
+      margin-top: 0;
+    }
+    #home p {
+      text-align: justify;
+      line-height: 1.6;
+      margin-bottom: 0.5em;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+      background-color: #fafafa;
+      text-align: justify;
+      padding-top: 1.5em;
+      padding-bottom: 1.5em;
+    }
+    #about h2 {
+      text-align: center;
+      text-shadow: 3px 2px lightgray;
+      color: #004e92;
+      margin-top: 0;
+    }
+    #about ul {
+      list-style-type: square;
+      margin-left: 40px;
+      margin-top: 0.5em;
+    }
+
+    /* CONTACT SECTION */
+    #contact {
+      background: linear-gradient(120deg, #d4fc79, #96e6a1);
+      padding: 2em 1.5em;
+    }
+    #contact h2 {
+      text-align: center;
+      text-shadow: 3px 2px lightgray;
+      color: #004e92;
+      margin-top: 0;
+    }
+
+    /* FORM */
+    form {
+      background: white;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 5px 5px 10px gray;
+      max-width: 400px;
+      margin: 0 auto; /* center form */
+      opacity: 0.95;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 2px solid #555;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    input:focus, textarea:focus {
+      border-color: darkcyan;
+      outline: none;
+    }
+    button {
+      background: #004e92;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0077b6;
+    }
+
+    /* -------------------------------
+       RESPONSIVE
+       ------------------------------- */
+    @media (max-width: 768px) {
+      nav li {
+        float: none;
+        text-align: center;
+        margin: 5px 0;
+      }
+      form {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Welcome to Golden shutter</h1>
+    <p>Welcome to <strong>Golden shutter</strong>, where every image tells a story. 
+      We specialize in capturing the beauty of everyday moments — from weddings and portraits 
+      to landscapes and special events. Our mission is to turn memories into timeless pieces 
+      of art through creativity, passion, and precision.</p>
+
+    <p>At Golden shutter, we believe photography is more than just pictures — it’s about emotions, 
+      connections, and stories. With a team of professional photographers and modern equipment, 
+      we make every photo a reflection of authenticity and emotion.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Our Studio</h2>
+    <p><strong>Golden shutter</strong> was founded by a group of creative photographers 
+      who share a love for storytelling through visuals. We’ve grown from a small studio into a 
+      full-fledged photography brand trusted by clients across the country. Our commitment to 
+      quality, innovation, and client satisfaction is what sets us apart.</p>
+
+    <p>We specialize in a wide range of services, ensuring that every client gets a personalized 
+      experience tailored to their vision and style.</p>
+
+    <ul>
+      <li>Wedding & Engagement Photography</li>
+      <li>Portrait & Lifestyle Shoots</li>
+      <li>Corporate & Event Photography</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required minlength="10" placeholder="Write your message here..."></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>
